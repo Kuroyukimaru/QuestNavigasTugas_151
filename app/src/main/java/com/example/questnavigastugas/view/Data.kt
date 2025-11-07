@@ -54,6 +54,29 @@ fun HalamanListPeserta(navController: NavHostController) {
                 Column(
                     modifier = Modifier.padding(16.dp)
                 ){
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Column {
+                            Text(
+                                text = stringResource(R.string.nama_lengkap),
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF42217E)
+                            )
+                            Text(text = "Gibran Fathoni", fontSize = 14.sp)
+                        }
+                        Column(horizontalAlignment = Alignment.End) {
+                            Text(
+                                text = stringResource(R.string.jenis_kelamin),
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF42217E)
+                            )
+                            Text(text = "Laki - Laki", fontSize = 14.sp)
+                        }
+                    }
 
                 }
             }
