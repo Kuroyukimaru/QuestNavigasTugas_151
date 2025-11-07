@@ -171,6 +171,18 @@ fun HalamanListPeserta(navController: NavHostController) {
                     }
                 }
             }
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            // Tombol Navigasi
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 24.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ){
+
+            }
         }
     }
 }
