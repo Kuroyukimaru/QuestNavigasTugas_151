@@ -1,16 +1,9 @@
 package com.example.questnavigastugas.view
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.material3.R
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -20,7 +13,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.questnavigastugas.R
 
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
 fun HalamanSelamatDatang(navController: NavHostController) {
     Surface(
         modifier = Modifier.fillMaxSize(),
@@ -62,6 +59,19 @@ fun HalamanSelamatDatang(navController: NavHostController) {
                     fontSize = 16.sp,
                     color = Color(0xFF20275B)
                 )
+
+                Spacer(modifier = Modifier.height(40.dp))
+
+                Button(
+                    onClick = { navController.navigate("formulirku") },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7)),
+                    shape = MaterialTheme.shapes.medium,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(48.dp)
+                ) {
+                    Text("Masuk", color = Color.White, fontSize = 16.sp)
+                }
             }
         }
     }
