@@ -3,4 +3,11 @@
     <string name="selamatdatang">Selamat Datang</string>
     <string name="nama">Faradila Fasya</string>
     <string name="nim">20230140151</string>
+    <string name="listdaftarpeserta">List Daftar Peserta</string>
+    <string name="namalengkap">NAMA LENGKAP</string>
+    <string name="jeniskelamin">JENIS KELAMIN</string>
+    <string name="statusperkawinan">STATUS PERKAWINAN</string>
+    <string name="alamat">ALAMAT</string>
+    <string name="beranda">Beranda</string>
+    <string name="formulir">Formulir</string>
 </resources>
