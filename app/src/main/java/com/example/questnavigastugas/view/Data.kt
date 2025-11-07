@@ -51,7 +51,11 @@ fun HalamanListPeserta(navController: NavHostController) {
                 shape = RoundedCornerShape(8.dp),
                 elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
             ){
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ){
 
+                }
             }
         }
     }
