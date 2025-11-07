@@ -170,7 +170,7 @@ fun HalamanListPeserta(navController: NavHostController) {
                 horizontalArrangement = Arrangement.SpaceEvenly
             ){
                 Button(
-                    onClick = {},
+                    onClick = {navController.popBackStack()},
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7))
                 ) {
                     Text(text = stringResource(R.string.beranda), color = Color.White)

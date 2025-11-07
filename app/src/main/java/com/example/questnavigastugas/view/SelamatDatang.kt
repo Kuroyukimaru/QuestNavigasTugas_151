@@ -63,7 +63,7 @@ fun HalamanSelamatDatang(navController: NavHostController) {
                 Spacer(modifier = Modifier.height(40.dp))
 
                 Button(
-                    onClick = { navController.navigate("formulirku") },
+                    onClick = { navController.navigate("ListPeserta") },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7)),
                     shape = MaterialTheme.shapes.medium,
                     modifier = Modifier
