@@ -47,6 +47,22 @@ fun HalamanSelamatDatang(navController: NavHostController) {
                 contentDescription = "Logo",
                 modifier = Modifier.size(600.dp)
             )
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = stringResource(id = R.string.nama),
+                    fontSize = 20.sp,
+                    color = Color(0xFF012885),
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = stringResource(id = R.string.nim),
+                    fontSize = 16.sp,
+                    color = Color(0xFF20275B)
+                )
+            }
         }
     }
 }
