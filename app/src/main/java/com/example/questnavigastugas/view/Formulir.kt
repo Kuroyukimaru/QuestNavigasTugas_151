@@ -181,6 +181,38 @@ fun Formulir(
                     }
                 }
             }
+
+            if (showDialog) {
+                AlertDialog(
+                    onDismissRequest = { showDialog = false },
+                    title = {
+                        Text(
+                            text = "Data Berhasil Disimpan",
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFF42217E)
+                        )
+                    },
+                    text = {
+                        Column {
+                            Text("${stringResource(R.string.namalengkap)}: $nama")
+                            Text("${stringResource(R.string.jeniskelamin)}: $selectedJenis")
+                            Text("${stringResource(R.string.statusperkawinan)}: $selectedStatus")
+                            Text("${stringResource(R.string.alamat)}: $alamat")
+                        }
+                    },
+                    confirmButton = {
+                        Button(
+                            onClick = {
+                                showDialog = false
+                                onSubmitBtnClick()
+                            },
+                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7))
+                        ) {
+                            Text("OK", color = Color.White)
+                        }
+                    }
+                )
+            }
         }
     }
 }
