@@ -128,6 +128,25 @@ fun Formulir(
                         }
                     }
 
+                    Text(
+                        text = stringResource(R.string.alamat),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF42217E),
+                        modifier = Modifier.padding(top = 8.dp)
+                    )
+                    OutlinedTextField(
+                        value = alamat,
+                        onValueChange = { alamat = it },
+                        singleLine = true,
+                        label = { Text(stringResource(R.string.alamat)) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp)
+                    )
+
+                    Spacer(modifier = Modifier.height(20.dp))
+
                 }
             }
         }
