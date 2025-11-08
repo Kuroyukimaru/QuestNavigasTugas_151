@@ -12,6 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.questnavigastugas.Navigasi
 import com.example.questnavigastugas.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -177,7 +178,7 @@ fun HalamanListPeserta(navController: NavHostController) {
                 }
 
                 Button(
-                    onClick = {},
+                    onClick = { navController.navigate(Navigasi.Formulir.name) },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF673AB7))
                 ) {
                     Text(text = stringResource(R.string.formulir), color = Color.White)
