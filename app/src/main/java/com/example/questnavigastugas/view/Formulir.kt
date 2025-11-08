@@ -147,6 +147,38 @@ fun Formulir(
 
                     Spacer(modifier = Modifier.height(20.dp))
 
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Button(
+                            onClick = onKembaliClick,
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color(0xFF673AB7)
+                            )
+                        ) {
+                            Text(
+                                text = stringResource(R.string.beranda),
+                                color = Color.White
+                            )
+                        }
+
+                        Button(
+                            onClick = { showDialog = true },
+                            enabled = nama.isNotEmpty() &&
+                                    alamat.isNotEmpty() &&
+                                    selectedJenis.isNotEmpty() &&
+                                    selectedStatus.isNotEmpty(),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color(0xFF673AB7)
+                            )
+                        ) {
+                            Text(
+                                text = stringResource(R.string.submit),
+                                color = Color.White
+                            )
+                        }
+                    }
                 }
             }
         }
