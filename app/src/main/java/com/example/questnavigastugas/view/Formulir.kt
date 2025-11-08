@@ -100,6 +100,34 @@ fun Formulir(
                             }
                         }
                     }
+
+                    Text(
+                        text = stringResource(R.string.statusperkawinan),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF42217E),
+                        modifier = Modifier.padding(top = 8.dp)
+                    )
+                    Column(modifier = Modifier.padding(top = 4.dp)) {
+                        statusPerkawinan.forEach { status ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier
+                                    .selectable(
+                                        selected = selectedStatus == status,
+                                        onClick = { selectedStatus = status }
+                                    )
+                                    .padding(vertical = 2.dp)
+                            ) {
+                                RadioButton(
+                                    selected = selectedStatus == status,
+                                    onClick = { selectedStatus = status }
+                                )
+                                Text(text = status)
+                            }
+                        }
+                    }
+
                 }
             }
         }
