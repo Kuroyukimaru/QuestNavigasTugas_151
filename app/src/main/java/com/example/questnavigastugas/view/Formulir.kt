@@ -1,6 +1,7 @@
 package com.example.questnavigastugas.view
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -73,6 +74,32 @@ fun Formulir(
                             .padding(vertical = 8.dp)
                     )
 
+                    Text(
+                        text = stringResource(R.string.jeniskelamin),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF42217E),
+                        modifier = Modifier.padding(top = 8.dp)
+                    )
+                    Column(modifier = Modifier.padding(top = 4.dp)) {
+                        jenisK.forEach { item ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier
+                                    .selectable(
+                                        selected = selectedJenis == item,
+                                        onClick = { selectedJenis = item }
+                                    )
+                                    .padding(vertical = 2.dp)
+                            ) {
+                                RadioButton(
+                                    selected = selectedJenis == item,
+                                    onClick = { selectedJenis = item }
+                                )
+                                Text(text = item)
+                            }
+                        }
+                    }
                 }
             }
         }
