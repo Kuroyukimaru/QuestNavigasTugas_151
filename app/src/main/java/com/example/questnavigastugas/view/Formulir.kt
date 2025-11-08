@@ -56,7 +56,22 @@ fun Formulir(
                         .fillMaxWidth()
                         .padding(20.dp),
                     horizontalAlignment = Alignment.Start
-                ){
+                ) {
+                    Text(
+                        text = stringResource(R.string.namalengkap),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF42217E)
+                    )
+                    OutlinedTextField(
+                        value = nama,
+                        onValueChange = { nama = it },
+                        singleLine = true,
+                        label = { Text(stringResource(R.string.namalengkap)) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp)
+                    )
 
                 }
             }
